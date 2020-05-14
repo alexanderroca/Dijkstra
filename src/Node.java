@@ -8,16 +8,10 @@ public class Node implements Comparable<Node>{
     private int distance = Integer.MAX_VALUE;
     private Node previousNode = null;
     public final Map<Node, Integer> neighbours = new HashMap<>();
-    //private ArrayList<Edge> linkedTo;
 
     public Node(String city) {
         this.city = city;
     }
-
-    /*public Node(String city, ArrayList<Edge> linkedTo) {
-        this.city = city;
-        this.linkedTo = linkedTo;
-    }*/
 
     public void printPath() {
         if (this == this.previousNode) {
@@ -42,16 +36,8 @@ public class Node implements Comparable<Node>{
         return "(" + city + ", " + distance + ")";
     }
 
-    public String getCity() {
-        return city;
-    }
-
     public int getDistance() {
         return distance;
-    }
-
-    public Node getPreviousNode() {
-        return previousNode;
     }
 
     public void setDistance(int distance) {
